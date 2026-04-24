@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import Game.Game;
-import Quiz.Quiz;
+// import Quiz.Quiz;
 import Game.ErrorCheck;
-import Store.StoreGame;
+// import Store.StoreGame;
 
 public class GamePortal {
     static Scanner sc = new Scanner(System.in);
@@ -36,9 +36,9 @@ public class GamePortal {
     }
 
     public static void loadGames() {
-         games.clear();
-        games.add(new NumberGuessGame());
-        games.add(new StoreGame());
+        games.clear();
+        games.add(new ascii2());
+        //games.add(new App());
         games.add(new Quiz());
     }
 

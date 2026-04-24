@@ -1,4 +1,4 @@
-package Quiz;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +33,7 @@ public class Quiz implements GameWriteable {
                 "You question systems and value justice.");
 
         // Create Questions
+       // Question q1 = new Question("What's your ideal weekend plan?");
         Question q1 = new Question("What's your ideal weekend plan?");
         q1.possibleAnswers[0] = new Answer("Attend a protest", dystopian);
         q1.possibleAnswers[1] = new Answer("Explore abandoned places", horror);
@@ -122,8 +123,8 @@ public class Quiz implements GameWriteable {
         sc.nextInt(); // consume start input
     }
 
-    public static List<Integer> getMostPopularCatIndex(Category[] counts) {
-        int max = 0;
+    public static List<Integer> getMostPopularCatIndex(Category[] counts){
+int max = 0;
 
         for (Category c : counts) {
             if (c.points > max) {
@@ -140,9 +141,11 @@ public class Quiz implements GameWriteable {
         }
 
         return winners;
-    }
 
-    // REQUIRED METHODS
+    }
+   
+
+    
 
     @Override
     public String getScore() {

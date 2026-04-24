@@ -1,3 +1,5 @@
+ 
+
 public class AsciiArt {
 char[][] img;
     int height;

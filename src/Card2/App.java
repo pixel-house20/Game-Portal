@@ -1,14 +1,12 @@
-package Card;
 import processing.core.PApplet;
 import java.util.HashMap;
 import java.util.List;
-import Game.Game;
-import java.io.File;
+
 import processing.core.PImage;
 
 // import java.util.List;
 
-public class App extends PApplet implements Game {
+public class App extends PApplet {
 
     ExplodingKittens game;
 
@@ -32,40 +30,7 @@ public class App extends PApplet implements Game {
 
 
     public static void main(String[] args) {
-        PApplet.main("Card.App");
-    }
-
-    @Override 
-    public String getGameName(){
-        return "Exploding Kittens";
-    }
-    @Override
-    public void play(){
-        PApplet.main("Card.App");
-    }
-
-    @Override
-    public String getScore(){
-        if (game == null) return "No game";
-
-        if (game.isGameOver()){
-            if(game.getExplodedPlayer() == 1) return "you Lost";
-
-            else return " you Won";
-        }
-        return "game Running";
-    }
-
-    @Override 
-    public void writeHighScore(File f){
-        try {
-            java.io.PrintWriter pw = new java.io.PrintWriter(f);
-            pw.println(getGameName());
-            pw.println(getScore());
-            pw.close();
-        } catch (Exception e) {
-            System.out.println("didn't save score ");
-        }
+        PApplet.main("App");
     }
 
     @Override
@@ -569,24 +534,4 @@ public void drawAIThinking() {
     
     popStyle();
 }
-
-    // @Override
-    // public String getGameName() {
-    //     throw new UnsupportedOperationException("Not supported yet.");
-    // }
-
-    // @Override
-    // public void play() {
-    //     throw new UnsupportedOperationException("Not supported yet.");
-    // }
-
-    // @Override
-    // public String getScore() {
-    //     throw new UnsupportedOperationException("Not supported yet.");
-    // }
-
-    // @Override
-    // public void writeHighScore(File f) {
-    //     throw new UnsupportedOperationException("Not supported yet.");
-    // }
 }
