@@ -1,12 +1,21 @@
+
+import Game.Game;
+
 import processing.core.PApplet;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
+// import Card;
+// import ExplodingKittens;
 import processing.core.PImage;
 
 // import java.util.List;
 
-public class App extends PApplet {
+public class App extends PApplet implements Game {
 
     ExplodingKittens game;
 
@@ -102,6 +111,39 @@ public void drawGameOverScreen(){
     textSize(28);
     text("RESTART", width / 2, btnY + btnH / 2); 
 }
+@Override
+public String getGameName(){
+    return "Exploding Kittens";
+}
+@Override
+public void play(){
+    if(game.isGameOver()){
+        currentState = GameOverState;
+        return;
+    }
+
+  
+}
+ @Override
+    public String getScore() {
+        if (!game.isGameOver()) {
+            return "Game in progress";
+        }
+
+        if (game.getExplodedPlayer() == 1) {
+            return "You Lost";
+        } else {
+            return "You Won";
+        }
+    }
+     @Override
+    public void writeHighScore(File f) {
+        try (FileWriter writer = new FileWriter(f, true)) {
+            writer.write(getGameName() + " - " + getScore() + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 @Override
 public void draw() {
     background(40, 45, 50);

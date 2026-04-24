@@ -5,6 +5,8 @@ A question class with Answers.
  */
 import java.util.Scanner;
 
+// import Card2.Category;
+
 public class Question {
 
     // Fields

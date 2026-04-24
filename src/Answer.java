@@ -4,6 +4,8 @@
  * This is an answer with a Category it corresponds to
  */
 
+// import Card2.Category;
+
 public class Answer {
     String label;
     Category cat;

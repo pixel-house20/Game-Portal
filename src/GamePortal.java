@@ -1,3 +1,4 @@
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,7 +39,7 @@ public class GamePortal {
     public static void loadGames() {
         games.clear();
         games.add(new ascii2());
-        //games.add(new App());
+       // games.add(new App());
         games.add(new Quiz());
     }
 

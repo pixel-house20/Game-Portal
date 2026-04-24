@@ -1,10 +1,9 @@
 
 
+import Game.GameWriteable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import Game.GameWriteable;
 
 public class Quiz implements GameWriteable {
 
